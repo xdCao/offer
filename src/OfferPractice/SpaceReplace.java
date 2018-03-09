@@ -3,7 +3,7 @@ package OfferPractice;
 /**
  * created by xdCao on 2018/3/7
  */
-
+// todo 字符串替换
 public class SpaceReplace {
 
     public String replaceSpace(StringBuffer str) {
