@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * created by xdCao on 2018/3/10
  */
-
+// todo 数组中找最小的k个数
 public class MinKArray {
 
     public static ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
