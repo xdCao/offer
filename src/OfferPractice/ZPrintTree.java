@@ -22,8 +22,6 @@ public class ZPrintTree {
 
     public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
 
-
-
         Queue<TreeNode> queue=new LinkedList<>();
         ArrayList<ArrayList<Integer>> ret=new ArrayList<>();
 

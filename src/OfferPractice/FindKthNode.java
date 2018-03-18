@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * created by xdCao on 2018/3/8
  */
-// todo 找链表倒数第k个指针，也是两个指针的问题
+
 public class FindKthNode {
 
     class ListNode{

@@ -1,4 +1,4 @@
-package chapter1.DogCat;
+package Guide.DogCat;
 
 import java.util.LinkedList;
 import java.util.Queue;
