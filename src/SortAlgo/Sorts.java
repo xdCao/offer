@@ -14,7 +14,9 @@ public class Sorts {
 
 //        selectSort(array);
 //        insertSort(array);
-        mergeSort(array);
+//        mergeSort(array);
+
+        quickSort(array);
 
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
@@ -84,8 +86,44 @@ public class Sorts {
     /*快排*/
     public static void quickSort(int[] array){
 
+        qSort(array,0,array.length-1);
 
+    }
 
+    private static void qSort(int[] array, int low, int high) {
+
+        if (low>=high)
+            return;
+
+        int j=partition(array,low,high);
+        qSort(array,low,j-1);
+        qSort(array,j+1,high);
+
+    }
+
+    private static int partition(int[] array, int low, int high) {
+        int temp=array[low];
+
+        int i=low;
+        int j=high+1;
+
+        while (true){
+            while (array[++i]<=temp){
+               if (i>=high)
+                   break;
+            }
+
+            while (array[--j]>=temp){
+                if (j<=low)
+                    break;
+            }
+            if (i>=j)
+                break;
+            swap(array,i,j);
+        }
+
+        swap(array,low,j);
+        return j;
     }
 
 
