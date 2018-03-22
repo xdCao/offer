@@ -4,7 +4,7 @@ import org.junit.Test;
  * created by xdCao on 2018/3/21
  */
 
-public class Niuke {
+public class Sorts {
 
     int[] array=new int[]{9,6,5,7,8,3,4,22,11,2};
 
@@ -137,7 +137,87 @@ public class Niuke {
     }
 
 
+    /*合并两个有序数组*/
+    @Test
+    public void mergeArray(){
+        int[] a=new int[]{2,4,5,0,0,0};
+        int[] b=new int[]{1,3,7};
+
+        int j=b.length-1;
+        int k=b.length-1;
+        for (int i = a.length-1; i >= 0; i--) {
+            if (j<0){
+                a[i]=b[k--];
+            }else if (k<0){
+                a[i]=a[j--];
+            }else if (a[j]>b[k]){
+                a[i]=a[j--];
+            }else {
+                a[i]=b[k--];
+            }
+        }
+
+        printArray(a);
+
+    }
+
+    /*0,1,2排序*/
+    @Test
+    public void dutchFlag(){
+        int[] a=new int[]{1,2,0,1,2,2,1,0,0,1};
+
+        int zeroIndex=-1;
+        int twoIndex=a.length;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i]==0){
+                swap(a,i,++zeroIndex);
+            }
+        }
+        for (int i = a.length-1; i >= 0; i--) {
+            if (a[i]==2){
+                swap(a,i,--twoIndex);
+            }
+        }
+
+        printArray(a);
+    }
+
+    /*需要排序的最大子数组*/
+    @Test
+    public void needSortSubArray(){
+        int[] array=new int[]{1,3,2,6,5,8,9};
+        int max=array[0];
+        int maxIndex=0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i]>=max){
+                max=array[i];
+            } else {
+                maxIndex=i;
+            }
+        }
+
+        int min=array[0];
+        int minIndex=0;
+        for (int i = array.length-1; i >= 0 ; i--) {
+            if (array[i]<=min){
+                min=array[i];
+            }else {
+                minIndex=i;
+            }
+        }
+
+        System.out.println(maxIndex-minIndex+1);
+
+    }
+
+
     private void printArray() {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+
+    private void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }

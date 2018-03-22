@@ -89,21 +89,24 @@ public class BTree {
             return null;
         }
 
-        Queue<Integer> queue=new Integer();
+        Queue<Integer> queue=new LinkedList<>();
         for (int i = 0; i < array.length; i++) {
             queue.add(array[i]);
         }
 
-        deSerialize(queue);
-
-        return null;
+        return deSerialize(queue);
     }
 
-    private Integer deSerialize(Queue<Integer> queue) {
+    private TreeNode deSerialize(Queue<Integer> queue) {
 
         Integer poll = queue.poll();
         if (poll==null)
             return null;
+        TreeNode treeNode=new TreeNode(poll);
+        treeNode.left=deSerialize(queue);
+        treeNode.right=deSerialize(queue);
+        return treeNode;
+
 
     }
 
