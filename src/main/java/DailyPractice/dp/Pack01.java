@@ -1,4 +1,4 @@
-package DailyPractice;
+package DailyPractice.dp;
 /*01背包问题*/
 public class Pack01 {
 

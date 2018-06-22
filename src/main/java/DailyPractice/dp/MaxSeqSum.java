@@ -1,4 +1,4 @@
-package DailyPractice;
+package DailyPractice.dp;
 /*最大连续子序列和*/
 public class MaxSeqSum {
 

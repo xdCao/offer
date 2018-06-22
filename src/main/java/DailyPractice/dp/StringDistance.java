@@ -1,4 +1,4 @@
-package DailyPractice;
+package DailyPractice.dp;
 /*字符串相似度,编辑距离*/
 public class StringDistance {
 

@@ -1,4 +1,4 @@
-package DailyPractice;
+package DailyPractice.dp;
 
 import java.util.ArrayList;
 import java.util.List;

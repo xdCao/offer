@@ -1,4 +1,4 @@
-package DailyPractice;
+package DailyPractice.dp;
 
 import java.util.ArrayList;
 /*硬币找零问题*/
