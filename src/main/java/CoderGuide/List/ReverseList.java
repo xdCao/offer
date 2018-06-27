@@ -1,6 +1,6 @@
 package CoderGuide.List;
 
-import LeetCode.ListNode;
+import interview.ListNode;
 
 /**
  * created by xdCao on 2018/4/2

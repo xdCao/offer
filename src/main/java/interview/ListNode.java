@@ -1,4 +1,4 @@
-package LeetCode;
+package interview;
 
 /**
  * created by xdCao on 2018/3/27
