@@ -15,6 +15,10 @@ public class MergeList {
         if (listNode==null)
             return null;
 
+        if(listNode.next==null){
+            return listNode;
+        }
+
         Common.ListNode mid = findMid(listNode);
 
         Common.ListNode next = mid.next;
